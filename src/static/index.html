@@ -5,6 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mergington High School Activities</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Participants section styling */
+      .participants-section {
+        margin-top: 10px;
+        background: #f7f7fa;
+        border-radius: 6px;
+        padding: 8px 12px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+      }
+      .participants-section strong {
+        display: block;
+        margin-bottom: 4px;
+        color: #3a3a6c;
+      }
+      .participants-list {
+        margin: 0;
+        padding-left: 18px;
+        color: #444;
+      }
+      .participants-list li {
+        margin-bottom: 2px;
+        font-size: 0.97em;
+        list-style-type: disc;
+      }
+      .participants-none {
+        color: #888;
+        font-style: italic;
+        margin: 0;
+        padding-left: 2px;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -26,7 +57,12 @@
         <form id="signup-form">
           <div class="form-group">
             <label for="email">Student Email:</label>
-            <input type="email" id="email" required placeholder="your-email@mergington.edu" />
+            <input
+              type="email"
+              id="email"
+              required
+              placeholder="your-email@mergington.edu"
+            />
           </div>
           <div class="form-group">
             <label for="activity">Select Activity:</label>
@@ -38,6 +74,16 @@
           <button type="submit">Sign Up</button>
         </form>
         <div id="message" class="hidden"></div>
+      </section>
+
+      <section class="participants-section">
+        <strong>Participants:</strong>
+        <ul class="participants-list">
+          <!-- Participant names will be dynamically inserted here -->
+          <li>John Doe</li>
+          <li>Jane Smith</li>
+        </ul>
+        <p class="participants-none">No participants yet.</p>
       </section>
     </main>
 
